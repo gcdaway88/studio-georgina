@@ -112,9 +112,22 @@ export function initPageImageAdmin(pageKey) {
     imgBadge.addEventListener('click', () => fileInput.click());
 
     fileInput.addEventListener('change', () => {
-      if (fileInput.files[0]) {
-        _uploadPageImage(el.dataset.slot, pageKey, fileInput.files[0], el, overlay);
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+      const MAX_SIZE_MB = 10;
+
+      if (!ALLOWED_TYPES.includes(file.type)) {
+        alert('Only JPEG, PNG, WebP or GIF images are allowed.');
+        return;
       }
+      if (file.size > MAX_SIZE_MB * 1024 * 1024) {
+        alert(`Image must be under ${MAX_SIZE_MB}MB.`);
+        return;
+      }
+
+      _uploadPageImage(el.dataset.slot, pageKey, file, el, overlay);
     });
 
     target.appendChild(overlay);
