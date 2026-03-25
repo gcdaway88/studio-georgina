@@ -67,3 +67,13 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Downloaded / generated content — managed by Firebase/Instagram, not source files
+Content/
+
+# Backup files
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
