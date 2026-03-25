@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#ebffdf",
+              "primary-fixed-dim": "#c5d9d2",
+              "outline": "#727d7c",
+              "outline-variant": "#a9b4b3",
+              "background": "#f8faf9",
+              "on-secondary": "#f7f9f7",
+              "tertiary-dim": "#45583e",
+              "inverse-surface": "#0b0f0f",
+              "primary-container": "#d3e7e0",
+              "on-tertiary-fixed": "#3a4d34",
+              "surface-tint": "#50625d",
+              "surface-bright": "#f8faf9",
+              "on-secondary-container": "#4f5251",
+              "on-tertiary-fixed-variant": "#566a4e",
+              "on-secondary-fixed-variant": "#595c5b",
+              "error": "#9f403d",
+              "tertiary": "#516449",
+              "primary": "#50625d",
+              "surface-container-low": "#f0f4f3",
+              "error-container": "#fe8983",
+              "on-surface": "#2a3434",
+              "on-error": "#fff7f6",
+              "tertiary-container": "#e1f8d5",
+              "surface": "#f8faf9",
+              "on-surface-variant": "#576160",
+              "on-primary-fixed": "#31433e",
+              "error-dim": "#4e0309",
+              "inverse-on-surface": "#9b9d9d",
+              "on-error-container": "#752121",
+              "primary-fixed": "#d3e7e0",
+              "secondary-dim": "#505452",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#e0e3e1",
+              "tertiary-fixed-dim": "#d3e9c7",
+              "inverse-primary": "#eafef7",
+              "tertiary-fixed": "#e1f8d5",
+              "on-primary-container": "#445551",
+              "on-primary": "#e8fcf5",
+              "on-primary-fixed-variant": "#4d5f5a",
+              "surface-container-highest": "#dae5e3",
+              "primary-dim": "#445651",
+              "surface-dim": "#cfdddb",
+              "secondary-fixed-dim": "#d2d5d3",
+              "secondary-container": "#e0e3e1",
+              "on-background": "#2a3434",
+              "surface-container": "#e9efee",
+              "secondary": "#5c605e",
+              "on-tertiary-container": "#4c5f45",
+              "on-secondary-fixed": "#3c403f",
+              "surface-variant": "#dae5e3",
+              "surface-container-high": "#e1eae9"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Epilogue"],
+              "label": ["Epilogue"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8faf9]/90 dark:bg-[#2a3434]/90 backdrop-blur-xl border-b border-[#a9b4b3]/30">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#2a3434] dark:text-[#f8faf9] font-headline uppercase">
+                Studio Georgina
+            </div>
+<div class="hidden md:flex items-center gap-12 font-['Epilogue'] font-medium text-sm tracking-wider uppercase">
+<a class="text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="#">Main</a>
+<a class="text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="#">Creativity</a>
+<a class="text-[#50625d] dark:text-[#e8fcf5] border-b border-[#50625d] pb-1" href="#">My Story</a>
+<a class="text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="#">Contact Me</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#50625d] dark:text-[#e8fcf5] cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<header class="max-w-screen-2xl mx-auto px-8 mb-32">
+<div class="editorial-grid">
+<div class="col-span-12 lg:col-span-7">
+<h1 class="font-headline font-extrabold text-7xl lg:text-9xl tracking-tighter text-on-surface leading-[0.9] mb-8">
+                        The World <br/>is my <span class="text-primary italic">Canvas.</span>
+</h1>
+</div>
+<div class="col-span-12 lg:col-span-5 flex flex-col justify-end">
+<p class="text-xl leading-relaxed text-on-surface-variant font-medium max-w-lg mb-4">
+                        Documenting a decade of wanderlust across 52 countries. From the indigo alleys of Chefchaouen to the misty highlands of Kyoto, every brushstroke is a memory mapped.
+                    </p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-6">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-outline">Est. 2014</span>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+<span class="font-label text-xs tracking-[0.2em] uppercase text-outline">Georgina Artiste</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Featured Journey: Asymmetric Layout -->
+<section class="mb-40 px-8 max-w-screen-2xl mx-auto">
+<div class="editorial-grid items-center">
+<div class="col-span-12 lg:col-span-8 relative">
+<div class="aspect-[16/10] overflow-hidden rounded-lg bg-surface-container-low">
+<img alt="Scenic landscape" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Cinematic wide shot of misty mountains in Northern Vietnam with tiered rice paddies and a lone traditional hut at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD47KOgyIpbILCm8vqZ5padutkxKg974_2--087OxABUf2RCZjIBbit6LJbCMfAeMKHRBZrVzjD3tblJt4saeIymS6QwXlcGSUgU25jy4I0EkrkWydVmZAwDjqwJBe-Kq8BsytRSBqrQRNeAKBtnw8e0-Vpwe4b7YwhYpLb5Z2azf861wh2QTrx3weA13zJRNebQ2OtEIIBodiTBGQpqEovR0G0HobHNCfOwTmbLUi0vBc1dZzn0wjRylRDFxzNue811NDtsdID6vA"/>
+</div>
+<!-- Overlapping Label -->
+<div class="absolute -bottom-12 -left-4 bg-surface-container-lowest p-8 shadow-[0_20px_40px_rgba(42,52,52,0.06)] border border-outline-variant/10 max-w-xs">
+<span class="font-label text-xs tracking-widest text-primary block mb-2">CHAPTER ONE</span>
+<h3 class="text-2xl font-bold font-headline leading-tight">East of the Horizon</h3>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 lg:pl-16 mt-24 lg:mt-0">
+<p class="font-body text-lg leading-relaxed text-on-surface mb-8 italic">
+                        "The way light hits the limestone kasts in Ha Long Bay changed how I perceived depth. It wasn't just water and rock; it was layers of blue-grey silence."
+                    </p>
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="font-label text-sm font-bold uppercase tracking-widest group-hover:underline">Explore the palette</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Diverse Inspirations -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline font-bold text-5xl tracking-tight mb-4 text-on-surface">52 Countries, One Story.</h2>
+<p class="font-label text-sm tracking-widest uppercase text-outline">Curated fragments of a nomadic life</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-lg overflow-hidden group relative">
+<img alt="Feature image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Majestic view of Yosemite Valley with El Capitan and Half Dome at sunset with warm orange and purple hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ8JYZ93wTq6dZXi7w-6-ysURF26YFmxllUmBRRiSfQgj-8JQi9hdFidPAB9x_FA99Yn14p49_5Twyb62-abKZOvwUTEHa2FywHsxyVDnogTq7MEkgrJBOqKSaWr4u1DU9ILj7gyaUNzfnpWTa-Z3B91bhSy_xRhlsHUpq-OyddDZnAxGKDgroOC3-YSf9dejxGzQMnTDwVWVr1MhRPEIyw773gfIw2Mu75Tub3UAlILc655KCpG81Opsch5WEwEg5nlL-ob35aCg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex flex-col justify-end p-8 text-white">
+<h4 class="text-3xl font-bold font-headline">The Sierras</h4>
+<p class="text-sm opacity-80 font-label tracking-widest uppercase mt-2">California, USA</p>
+</div>
+</div>
+<!-- Medium Feature -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-lg overflow-hidden group relative">
+<img alt="Urban image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric street scene in London at night with red buses crossing the Waterloo bridge under a soft glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByCYBQ8thOTtw0Mlz7eYsRYXtbRfF0pqQfH2W9S_AQxwAZJIuo488cLlmMWBmmkhAhIhLY13Ytd84wTnqRHj8LPGt9N2T_gV6seQYThZUW4cV6wtEkWbMBsKmddhdiCZDbaIrpD-IovO70UoMy1yQAyBLhi0l6Nc9yanHRLrOQq8ZP5ibiZcd5lUaE76EfEnNV9qh473WLE5CenfeH5dAfCinr0EAx9KxFXI6K5EBbllsoq2ch2Exly9pbv5xLmf1RES0xknMomY8"/>
+<div class="absolute inset-0 bg-on-surface/20 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="absolute top-6 left-6">
+<span class="bg-primary text-on-primary px-3 py-1 text-[10px] font-label font-bold tracking-[0.2em] uppercase">Architecture</span>
+</div>
+</div>
+<!-- Small Features -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group relative">
+<img alt="Culture image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Intricate golden architecture of the Taj Mahal reflecting in the garden pool under a clear blue morning sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMg1mvVKAcyamn28O7CEjvzl3OXOLIieCZw_xSTlDfl81PMtGJq1DhvahMQrZNrwEolTDCk0cdpOQ66ZhXJCYK0ah6udUk4LomSVUq-k-KPIaxpc03xfaP_7F5YiIuLNHObW-kcJXuaFQeKZRjDmPKJV48DmxfKVjSPCKyhLGRO7LONkzHcQ2zZDaOKP8ujQyHxuM17l3E1eM1hl3SsS57TclgSf6okjHg5O9ZM7wQQyK9SwTV1DgiRCgK6gg3TsZ0QeBMAZj3rm8"/>
+</div>
+<div class="bg-primary text-on-primary p-8 flex flex-col justify-center rounded-lg">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="public">public</span>
+<h5 class="text-xl font-bold font-headline leading-tight">Globally <br/>Grounded</h5>
+<p class="mt-4 text-sm opacity-80 leading-relaxed">Each region taught me a new technique, from Japanese minimalism to African vibrant contrast.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote / Divider -->
+<section class="py-40 px-8 text-center bg-background">
+<div class="max-w-4xl mx-auto">
+<span class="material-symbols-outlined text-outline-variant text-6xl mb-8" data-icon="format_quote">format_quote</span>
+<blockquote class="text-4xl lg:text-5xl font-headline font-bold leading-tight tracking-tight text-on-surface mb-12">
+                    "Art is not what I see, but what I make others see through the lens of my journey."
+                </blockquote>
+<div class="flex justify-center items-center gap-6">
+<span class="h-px w-12 bg-outline-variant"></span>
+<p class="font-label text-xs tracking-[0.3em] uppercase text-outline">Journal Entry #402 — Paris</p>
+<span class="h-px w-12 bg-outline-variant"></span>
+</div>
+</div>
+</section>
+<!-- Detailed Journal Content -->
+<section class="px-8 max-w-screen-2xl mx-auto">
+<div class="editorial-grid">
+<div class="col-span-12 lg:col-span-3">
+<div class="sticky top-32">
+<h3 class="font-label text-xs tracking-widest text-primary font-bold uppercase mb-6">Archive List</h3>
+<ul class="space-y-4 font-body text-sm border-l border-outline-variant/30 pl-6">
+<li class="text-primary font-bold border-l-2 border-primary -ml-[1.62rem] pl-6 transition-all">2023: The Nordic Silence</li>
+<li class="text-on-surface-variant hover:text-primary cursor-pointer transition-colors">2022: Mediterranean Light</li>
+<li class="text-on-surface-variant hover:text-primary cursor-pointer transition-colors">2021: Highland Roots</li>
+<li class="text-on-surface-variant hover:text-primary cursor-pointer transition-colors">2019: Silk Road Spirits</li>
+<li class="text-on-surface-variant hover:text-primary cursor-pointer transition-colors">2018: Amazonian Depth</li>
+</ul>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-9">
+<article class="space-y-16">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1">
+<h4 class="text-3xl font-bold font-headline mb-6 tracking-tight">The Nordic Silence</h4>
+<p class="text-lg leading-loose text-on-surface-variant mb-6">
+                                    Spending three months in a remote cabin in Norway forced a confrontation with the color white. In the studio, we think of white as empty space, but in the Arctic, white is a thousand different hues—blue shadows, yellow glints of low-hanging sun, and the grey of heavy snow clouds.
+                                </p>
+<p class="text-lg leading-loose text-on-surface-variant">
+                                    This trip resulted in the 'Solitude' series, where I utilized the texture of thick impasto to mimic the heavy, quiet blankets of snow that muted the world outside my window.
+                                </p>
+</div>
+<div class="w-full md:w-80 aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
+<img alt="Journal image" class="w-full h-full object-cover" data-alt="Moody vertical shot of a tiny red wooden cabin surrounded by deep snow and birch trees in a winter twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfj2SyzUY2apK2TfNUHBerWzrx583bPDDylwufsbSK-V2ilYUsE5K40pSpR7cmiXzgmtWXyOb0BZq8nnPe8iMbHFrOTmBOLe73sx1zUZSSOFmHcuogE3Cfrp8pXe57OHpwC1m0rmYDAr9nvRJNm1xESY1sySxEbcoNVEAfbdLEuMund6C0ThjslBjly6Sg6KddwIIlEUJ2NRjaIlJWJNEcTzEIBazqg6NHj26N2Fv6__uiMBavtKATeqF_Yaz4JWWymEZ6AH5k8NE"/>
+</div>
+</div>
+<div class="bg-surface-container-highest p-12 rounded-lg editorial-grid">
+<div class="col-span-12 lg:col-span-5">
+<img alt="Process image" class="w-full aspect-square object-cover rounded shadow-lg" data-alt="Detailed close-up of an artist's hand mixing oil paints on a wooden palette with vibrant shades of teal, ochre, and crimson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRnAAtzHxn4a5rUgkg235JnTikkYT31InWxsGvtpnhf5Nm-8AsEhw7hM3XIzcaTzdupfk65lCGc3a5xHbZaB-0I4IDN2yNs-l3L-xT4PdYTGRdTBuvefRl4ADLBXwhaLi_f3sUB5euLqH-mb6sAczKK7gbB5dIDmwNTwyXn8dKosHSpuDc4O8QhSO8_ITbQtSTGlIiDuy3rt7sdD0ZR6mafAa6PXwl3pafDPV_33VMjpXkcWENLzBlutr8_3CQ4jGu3NAMdhOJj0U"/>
+</div>
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center lg:pl-12 mt-8 lg:mt-0">
+<h4 class="text-2xl font-bold font-headline mb-4 uppercase tracking-tighter">Tools of the Trade</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                                    I never travel without my pocket-sized Moleskine and a 12-pan watercolor set. These quick sketches are the skeletons of the larger oil canvases created back in the studio. They capture the immediate emotion of a place—something memory alone cannot replicate.
+                                </p>
+<button class="bg-primary text-on-primary px-8 py-3 w-fit font-label text-xs font-bold tracking-widest uppercase hover:bg-primary-dim transition-colors">View Travel Sketches</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer / Bottom Anchor -->
+<footer class="bg-surface-container-highest border-t border-outline-variant/20 pt-24 pb-40">
+<div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+<div>
+<h2 class="text-6xl font-headline font-extrabold tracking-tighter mb-8 uppercase">Studio <br/>Georgina</h2>
+<div class="flex gap-8">
+<a class="font-label text-xs tracking-widest uppercase hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-label text-xs tracking-widest uppercase hover:text-primary transition-colors" href="#">Behance</a>
+<a class="font-label text-xs tracking-widest uppercase hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+</div>
+<div class="max-w-sm text-right">
+<p class="font-body text-sm text-on-surface-variant mb-6">
+                    A global creative practice specializing in narrative painting and editorial documentation of the human experience.
+                </p>
+<p class="font-label text-[10px] tracking-widest uppercase text-outline">© 2024 Georgina Artiste. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#f8faf9] dark:bg-[#2a3434] px-4 pb-safe border-t border-[#a9b4b3]/15 shadow-[0_-10px_30px_rgba(42,52,52,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#a9b4b3]">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Main</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#a9b4b3]">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Creativity</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#50625d] dark:text-[#e8fcf5] scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">My Story</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#a9b4b3]">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Contact</span>
+</div>
+</nav>
+</body></html>

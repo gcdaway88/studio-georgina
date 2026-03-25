@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Gallery artworks — public read, admin write
+    match /gallery/{docId} {
+      allow read:  if true;
+      allow write: if isAdmin();
+    }
+
+    // Page image slots — public read, admin write
+    match /pageImages/{slotKey} {
+      allow read:  if true;
+      allow write: if isAdmin();
+    }
+
+    // Page text content — public read, admin write
+    match /pageText/{key} {
+      allow read:  if true;
+      allow write: if isAdmin();
+    }
+
+    // Admin config — authenticated read only, never writable via client
+    // (edit only through the Firebase console)
+    match /adminConfig/{docId} {
+      allow read:  if request.auth != null;
+      allow write: if false;
+    }
+
+    // Admins collection — readable by any authenticated user, writable only by admins
+    match /admins/{email} {
+      allow read:  if request.auth != null;
+      allow write: if isAdmin();
+    }
+
+    // ── Helper: admin check ──────────────────────────────────────────────
+    // Any email present as a document ID in the 'admins' collection is an admin.
+    // Add/remove admins via the Admin Dashboard or directly in the Firebase console.
+    function isAdmin() {
+      return request.auth != null
+          && request.auth.token.email_verified == true
+          && exists(/databases/$(database)/documents/admins/$(request.auth.token.email));
+    }
+  }
+}

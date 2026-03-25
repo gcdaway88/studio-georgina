@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studio Georgina | The Digital Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#ebffdf",
+              "primary-fixed-dim": "#c5d9d2",
+              "outline": "#727d7c",
+              "outline-variant": "#a9b4b3",
+              "background": "#f8faf9",
+              "on-secondary": "#f7f9f7",
+              "tertiary-dim": "#45583e",
+              "inverse-surface": "#0b0f0f",
+              "primary-container": "#d3e7e0",
+              "on-tertiary-fixed": "#3a4d34",
+              "surface-tint": "#50625d",
+              "surface-bright": "#f8faf9",
+              "on-secondary-container": "#4f5251",
+              "on-tertiary-fixed-variant": "#566a4e",
+              "on-secondary-fixed-variant": "#595c5b",
+              "error": "#9f403d",
+              "tertiary": "#516449",
+              "primary": "#50625d",
+              "surface-container-low": "#f0f4f3",
+              "error-container": "#fe8983",
+              "on-surface": "#2a3434",
+              "on-error": "#fff7f6",
+              "tertiary-container": "#e1f8d5",
+              "surface": "#f8faf9",
+              "on-surface-variant": "#576160",
+              "on-primary-fixed": "#31433e",
+              "error-dim": "#4e0309",
+              "inverse-on-surface": "#9b9d9d",
+              "on-error-container": "#752121",
+              "primary-fixed": "#d3e7e0",
+              "secondary-dim": "#505452",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#e0e3e1",
+              "tertiary-fixed-dim": "#d3e9c7",
+              "inverse-primary": "#eafef7",
+              "tertiary-fixed": "#e1f8d5",
+              "on-primary-container": "#445551",
+              "on-primary": "#e8fcf5",
+              "on-primary-fixed-variant": "#4d5f5a",
+              "surface-container-highest": "#dae5e3",
+              "primary-dim": "#445651",
+              "surface-dim": "#cfdddb",
+              "secondary-fixed-dim": "#d2d5d3",
+              "secondary-container": "#e0e3e1",
+              "on-background": "#2a3434",
+              "surface-container": "#e9efee",
+              "secondary": "#5c605e",
+              "on-tertiary-container": "#4c5f45",
+              "on-secondary-fixed": "#3c403f",
+              "surface-variant": "#dae5e3",
+              "surface-container-high": "#e1eae9"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Epilogue"],
+              "label": ["Epilogue"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            animation: {
+              'float-slow': 'float 25s ease-in-out infinite',
+              'float-slower': 'float-reverse 35s ease-in-out infinite',
+              'float-slowest': 'float-drift 45s ease-in-out infinite',
+              'meteor': 'meteor var(--duration) linear infinite var(--delay)',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.4' },
+                '33%': { transform: 'translate(10vw, -15vh) scale(1.2)', opacity: '0.6' },
+                '66%': { transform: 'translate(-5vw, 10vh) scale(0.9)', opacity: '0.4' },
+              },
+              'float-reverse': {
+                '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.3' },
+                '50%': { transform: 'translate(-15vw, -20vh) scale(1.3)', opacity: '0.5' },
+              },
+              'float-drift': {
+                '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)', opacity: '0.3' },
+                '50%': { transform: 'translate(20vw, 15vh) rotate(180deg) scale(1.2)', opacity: '0.5' },
+              },
+              meteor: {
+                '0%': { transform: 'translateY(-100px)', opacity: '0' },
+                '10%': { opacity: '0.8' },
+                '90%': { opacity: '0.8' },
+                '100%': { transform: 'translateY(100vh)', opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Epilogue', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-blob {
+            filter: blur(80px);
+            z-index: -1;
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+        .dark .organic-blob {
+            mix-blend-mode: screen;
+            filter: blur(100px);
+        }
+        /* Vertical Meteor/Rain Effect */
+        .meteor-line {
+            position: absolute;
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #50625d, transparent);
+            opacity: 0;
+            z-index: -5;
+        }
+        .dark .meteor-line {
+            background: linear-gradient(to bottom, transparent, #e8fcf5, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden relative">
+<!-- Meteor/Rain Background Layer -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none -z-20">
+<div class="meteor-line animate-meteor" style="left: 10%; --duration: 2s; --delay: 0s;"></div>
+<div class="meteor-line animate-meteor" style="left: 25%; --duration: 1.5s; --delay: 0.5s;"></div>
+<div class="meteor-line animate-meteor" style="left: 45%; --duration: 2.5s; --delay: 1.2s;"></div>
+<div class="meteor-line animate-meteor" style="left: 65%; --duration: 1.8s; --delay: 0.8s;"></div>
+<div class="meteor-line animate-meteor" style="left: 85%; --duration: 2.2s; --delay: 0.3s;"></div>
+<div class="meteor-line animate-meteor" style="left: 5%; --duration: 3s; --delay: 2s;"></div>
+<div class="meteor-line animate-meteor" style="left: 35%; --duration: 2s; --delay: 1.5s;"></div>
+<div class="meteor-line animate-meteor" style="left: 55%; --duration: 1.7s; --delay: 2.2s;"></div>
+<div class="meteor-line animate-meteor" style="left: 75%; --duration: 2.8s; --delay: 1s;"></div>
+<div class="meteor-line animate-meteor" style="left: 95%; --duration: 1.9s; --delay: 1.8s;"></div>
+</div>
+<!-- Floating Background Objects -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+<div class="absolute top-[5%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-tertiary-container/80 organic-blob animate-float-slow"></div>
+<div class="absolute top-[30%] right-[-15%] w-[70vw] h-[70vw] rounded-full bg-primary-container/70 organic-blob animate-float-slower"></div>
+<div class="absolute bottom-[-10%] left-[10%] w-[55vw] h-[55vw] rounded-full bg-secondary-container/90 organic-blob animate-float-slowest"></div>
+<div class="absolute top-[60%] left-[-20%] w-[65vw] h-[65vw] rounded-full bg-tertiary-fixed/70 organic-blob animate-float-slower"></div>
+<div class="absolute bottom-[20%] right-[-5%] w-[50vw] h-[50vw] rounded-full bg-primary-fixed/60 organic-blob animate-float-slow"></div>
+</div>
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8faf9]/90 dark:bg-[#2a3434]/90 backdrop-blur-xl border-b border-[#a9b4b3]/30">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#2a3434] dark:text-[#f8faf9]">
+            Studio Georgina
+        </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="#">Main</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-on-surface/60 hover:text-primary transition-colors duration-300" href="#creativity">Creativity</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-on-surface/60 hover:text-primary transition-colors duration-300" href="#mystory">My Story</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-on-surface/60 hover:text-primary transition-colors duration-300" href="#contact">Contact Me</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#2a3434] dark:text-[#f8faf9] active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section: Editorial Asymmetry -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-24 lg:mb-40">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="font-label text-sm uppercase tracking-[0.2em] text-outline mb-6 block">Visual Narrative &amp; Direction</span>
+<h1 class="font-headline font-extrabold text-7xl lg:text-[120px] leading-[0.9] tracking-tighter text-on-surface mb-12">
+                    Defining the <br/> <span class="text-primary italic font-medium">Digital</span> Curator.
+                </h1>
+</div>
+<div class="lg:col-span-5 pb-4">
+<p class="font-body text-xl leading-relaxed text-on-surface-variant max-w-md">
+                    A curated space where minimalist design meets intentional storytelling. We craft digital experiences that breathe, speak, and endure.
+                </p>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-label uppercase tracking-widest text-xs hover:bg-primary-dim transition-colors">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: The Curator's Collection -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-40" id="creativity">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 h-auto md:h-[800px]">
+<!-- Main Feature -->
+<div class="md:col-span-2 lg:col-span-3 bg-surface-container-low p-1 relative overflow-hidden group">
+<div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105 bg-cover bg-center" data-alt="minimalist interior of a modern art gallery with soft natural light hitting a large abstract canvas and polished concrete floor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxcbs0wdu299AlR-G9G-EQqQixIPpLmdGRTBzKmR0tKLkO68ENDGIuzi7kZrc_ka-g5TN9YykNFO4xwHKmxxvk2EeCaOnHYtR2XJBSpGYme0Ib9ds0OfiyF58l_mGiwZ7ZTuzIcp44fsKzMSz-lZfDSMNYu7L5GY8ebxqlNUf_agM_UfuPYeJ-1KFHPghaXOCRVtGlDVtImAX0lgn_wMBUikIV5IUf61MSakPHpITK6sQ-a1GJYr0zjUs4bRBaIyEp6LCRoOLFOO4')"></div>
+<div class="relative z-10 h-full p-8 flex flex-col justify-end bg-gradient-to-t from-on-surface/40 to-transparent">
+<span class="font-label text-[10px] tracking-widest text-on-primary uppercase mb-2">Featured Project</span>
+<h3 class="font-headline text-3xl font-bold text-on-primary">The Silence of Form</h3>
+</div>
+</div>
+<!-- Pastel Block 1 -->
+<div class="md:col-span-2 lg:col-span-3 bg-tertiary-container flex flex-col justify-between p-12">
+<div>
+<h4 class="font-headline text-4xl font-bold text-on-tertiary-container leading-tight mb-6">Creativity is the <br/>soul of the machine.</h4>
+<p class="text-on-tertiary-container/80 max-w-xs">We prioritize the rhythmic balance of elements over the density of data.</p>
+</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container" data-icon="palette">palette</span>
+</div>
+</div>
+<!-- Small Image Block -->
+<div class="lg:col-span-2 bg-surface-container-highest p-1 relative overflow-hidden group min-h-[300px]">
+<div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105 bg-cover bg-center" data-alt="close-up of a designer's desk with a ceramic cup of coffee, an open notebook with sketches, and soft morning sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmuWllY5tWY5JQQk3m4wRFdoQVuyTp3qBOhh6209sHx5_GMjj42aVuNysyQy0GUmRHNA5RQWTFtd2AseLYWJoasdUZNpwCzF_3OLq9IChr-V4xggHlj-uo2J_g4WMBCku8z5b2WnZSqlkInBwW0Vz7McNk0IcLkvwGi5RWblM8av3iD1OqCm9afmdAyf7doQ4D9UiZkPV_paZfEoRR9_YZruaE1O7JlbUzs7FfG_W0LKfrhHoHfzRvnWtNwLX-Qa8tXioV8wnQPqY')"></div>
+<div class="relative z-10 h-full p-6 flex flex-col justify-end">
+<h3 class="font-headline text-xl font-bold text-white">Daily Rituals</h3>
+</div>
+</div>
+<!-- Identity Block -->
+<div class="lg:col-span-2 bg-surface-container-high p-12 flex flex-col justify-center">
+<span class="font-label text-[10px] tracking-widest text-outline uppercase mb-4">Core Philosophy</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4 leading-snug">Purpose over Noise</h3>
+<div class="w-12 h-1 bg-primary"></div>
+</div>
+<!-- Pastel Block 2 -->
+<div class="lg:col-span-2 bg-primary-container p-12 flex flex-col justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" data-icon="auto_stories">auto_stories</span>
+<p class="font-headline text-2xl font-bold text-on-primary-container">Every brand has a story worth curating.</p>
+</div>
+</div>
+</section>
+<!-- Content Reveal Section -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-40" id="mystory">
+<div class="flex flex-col lg:flex-row gap-20 items-start">
+<div class="lg:w-1/3 sticky top-32">
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter text-on-surface mb-8">Current Explorations</h2>
+<p class="text-on-surface-variant leading-relaxed">Studio Georgina is currently focusing on the intersection of tactile photography and high-performance digital interfaces.</p>
+</div>
+<div class="lg:w-2/3 space-y-32">
+<!-- Article Item 1 -->
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2 aspect-[4/5] bg-surface-container-low relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="atmospheric black and white photograph of architectural details on a brutalist concrete building with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9EWjnhUoJsCg22RVp5t3J7YqgpKL9fshjqDzmLn18knqe5UQ9e31n-i1GAFjMyHKqc0tLGpgH5fF3W-I2goIevmOxAirJxd4ldezBrN9r4byh3a0p_ED9egtw_zD4dG_E_FjOiislUIIH-XASDEep_Qh_pLrFhWkAh3UmVEPXEloLIaY0IgqywH6S4WY0NgjSWjBg4TX0IWET4jt-lEko2W-j1hViln2X4S7fqM0DCZ6SYJGFF-p28HFrbJq9mwxHTKzeELtlb0Q"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label text-[10px] tracking-widest text-outline uppercase">Journal // 01</span>
+<h4 class="font-headline text-3xl font-bold mt-4 mb-6">The Brutalist Revival in UI</h4>
+<p class="text-on-surface-variant mb-8">Exploring how raw architectural principles can bring honesty back to the digital screen.</p>
+<a class="text-on-surface font-label uppercase text-xs tracking-widest border-b border-on-surface/20 pb-1 hover:border-primary transition-colors" href="#">Read More</a>
+</div>
+</div>
+<!-- Article Item 2 -->
+<div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+<div class="w-full md:w-1/2 aspect-[4/5] bg-surface-container-low relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="zen-like arrangement of smooth river stones on a bed of fine white sand with minimal zen garden rake patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8uiFic8e49LSTEfrEyYYoiHr_XqqrW_3lLddW40Q3yAkgPQ2g-A8x6SnLW10IYlEVF6PUFlLKHiSOXiFP4AqDZSSKvi1rXf--6kZyn3v9YBgCG-mmhKEQa5nx_zjOpUkww6XRR53qtp1KoOQet1tILHPj0-psQ1wbeM9FH36atDyNK-Q88giFwWKyk-dXVm6LULK_OQCxV-6TNsleq55RvfYh2spv_67x9P-Uxj0iQ3gNh9OC-1gvdbGtxlunfNoQQTJMiV-bNSw"/>
+</div>
+<div class="w-full md:w-1/2 text-right">
+<span class="font-label text-[10px] tracking-widest text-outline uppercase">Journal // 02</span>
+<h4 class="font-headline text-3xl font-bold mt-4 mb-6">Intentional Friction</h4>
+<p class="text-on-surface-variant mb-8">Why speeding up the user journey isn't always the best design decision for high-end luxury.</p>
+<a class="text-on-surface font-label uppercase text-xs tracking-widest border-b border-on-surface/20 pb-1 hover:border-primary transition-colors" href="#">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA: Minimalist Tonal Block -->
+<section class="bg-surface-container-low/50 backdrop-blur-sm py-32" id="contact">
+<div class="max-w-screen-2xl mx-auto px-8 text-center">
+<h2 class="font-headline text-6xl font-bold tracking-tighter text-on-surface mb-12">Start a conversation.</h2>
+<div class="flex flex-col items-center gap-8">
+<p class="text-on-surface-variant max-w-lg text-lg">Whether you're looking for a full brand refresh or a single curated digital experience, let's create something meaningful.</p>
+<a class="font-headline text-4xl font-light text-primary hover:text-primary-dim transition-colors underline underline-offset-8 decoration-1 decoration-outline-variant" href="mailto:hello@studiogeorgina.com">hello@studiogeorgina.com</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#f8faf9]/90 backdrop-blur-xl dark:bg-[#2a3434]/90 px-4 pb-safe border-t border-[#a9b4b3]/15 shadow-[0_-10px_30px_rgba(42,52,52,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#50625d] dark:text-[#e8fcf5] scale-110 transition-transform active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Main</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3] hover:text-[#50625d] active:scale-95 duration-100" href="#creativity">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Creativity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3] hover:text-[#50625d] active:scale-95 duration-100" href="#mystory">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">My Story</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3] hover:text-[#50625d] active:scale-95 duration-100" href="#contact">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Contact</span>
+</a>
+</nav>
+<footer class="bg-background py-12 px-8 border-t border-outline-variant/15">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-on-surface-variant font-label text-[10px] tracking-[0.3em] uppercase">
+            © 2024 Studio Georgina. All Rights Reserved.
+        </div>
+<div class="flex gap-8 text-on-surface-variant font-label text-[10px] tracking-[0.2em] uppercase">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Behance</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>

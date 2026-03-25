@@ -1,0 +1,13 @@
+Step 1: Create an art website viewable in desktop or mobile, which will have 4 pages.
+Use Main.html as the "Studio Georgina" page which will be the main page containing my style.  Modern minimalist, pastel color blocks.
+Use My_Story.html as the "My Story" page, contains where I draw my inspiration from, which is having travelled to more than 50 countries around the world. 
+Use Creativity.html as the "Creativity" page, which is my product page.  It should be a gallery of my arts and prices.
+Use Contact_Me.html as the "Contact Me" page, which allows users to reach out to me for inquiries or orders via email to get a quotation.
+
+The header tabs/links of each page should direct to the corresponding pages accordingly.
+
+Use images from ./Content/instagram/studio_georgina as images in the website.
+
+Step 2: Test the website locally once drafted.  
+
+Step 3: Once confirmed that the website looks good, deploy it to vercel.

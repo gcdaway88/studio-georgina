@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip show:*)",
+      "Bash(pip install:*)",
+      "Bash(instaloader --no-videos --no-video-thumbnails --no-metadata-json --no-captions --dirname-pattern=. studio_georgina)",
+      "Bash(gallery-dl --no-mtime -d . \"https://www.instagram.com/studio_georgina/\")",
+      "Bash(python:*)",
+      "Bash(gallery-dl --no-mtime --cookies cookies.txt -d . \"https://www.instagram.com/studio_georgina/\")"
+    ]
+  }
+}

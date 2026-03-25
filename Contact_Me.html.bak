@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Me | Studio Georgina</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#ebffdf",
+              "primary-fixed-dim": "#c5d9d2",
+              "outline": "#727d7c",
+              "outline-variant": "#a9b4b3",
+              "background": "#f8faf9",
+              "on-secondary": "#f7f9f7",
+              "tertiary-dim": "#45583e",
+              "inverse-surface": "#0b0f0f",
+              "primary-container": "#d3e7e0",
+              "on-tertiary-fixed": "#3a4d34",
+              "surface-tint": "#50625d",
+              "surface-bright": "#f8faf9",
+              "on-secondary-container": "#4f5251",
+              "on-tertiary-fixed-variant": "#566a4e",
+              "on-secondary-fixed-variant": "#595c5b",
+              "error": "#9f403d",
+              "tertiary": "#516449",
+              "primary": "#50625d",
+              "surface-container-low": "#f0f4f3",
+              "error-container": "#fe8983",
+              "on-surface": "#2a3434",
+              "on-error": "#fff7f6",
+              "tertiary-container": "#e1f8d5",
+              "surface": "#f8faf9",
+              "on-surface-variant": "#576160",
+              "on-primary-fixed": "#31433e",
+              "error-dim": "#4e0309",
+              "inverse-on-surface": "#9b9d9d",
+              "on-error-container": "#752121",
+              "primary-fixed": "#d3e7e0",
+              "secondary-dim": "#505452",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#e0e3e1",
+              "tertiary-fixed-dim": "#d3e9c7",
+              "inverse-primary": "#eafef7",
+              "tertiary-fixed": "#e1f8d5",
+              "on-primary-container": "#445551",
+              "on-primary": "#e8fcf5",
+              "on-primary-fixed-variant": "#4d5f5a",
+              "surface-container-highest": "#dae5e3",
+              "primary-dim": "#445651",
+              "surface-dim": "#cfdddb",
+              "secondary-fixed-dim": "#d2d5d3",
+              "secondary-container": "#e0e3e1",
+              "on-background": "#2a3434",
+              "surface-container": "#e9efee",
+              "secondary": "#5c605e",
+              "on-tertiary-container": "#4c5f45",
+              "on-secondary-fixed": "#3c403f",
+              "surface-variant": "#dae5e3",
+              "surface-container-high": "#e1eae9"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Epilogue"],
+              "label": ["Epilogue"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8faf9]/90 backdrop-blur-xl border-b border-[#a9b4b3]/30">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#2a3434]">Studio Georgina</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#2a3434]/60 hover:text-[#50625d] transition-colors duration-300" href="#">Main</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#2a3434]/60 hover:text-[#50625d] transition-colors duration-300" href="#">Creativity</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#2a3434]/60 hover:text-[#50625d] transition-colors duration-300" href="#">My Story</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#50625d] border-b border-[#50625d] pb-1" href="#">Contact Me</a>
+</div>
+<div class="flex items-center">
+<button class="material-symbols-outlined text-[#50625d] text-2xl">account_circle</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Hero Section Asymmetry -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-24">
+<div class="md:col-span-7">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-outline mb-6 block">Inquiries &amp; Commissions</span>
+<h1 class="font-headline text-7xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
+                    Start a <br/><span class="text-primary italic font-light">Conversation.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Whether you are seeking a custom oil painting, a commercial collaboration, or a detailed quotation for an existing piece, I welcome the opportunity to connect.
+                </p>
+</div>
+<div class="md:col-span-5 flex flex-col justify-end">
+<div class="bg-surface-container-low p-10 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold mb-4">The Studio</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                            Available for private viewings by appointment only. Located in the heart of the historic arts district.
+                        </p>
+<div class="flex items-center gap-4 text-primary font-semibold">
+<span class="material-symbols-outlined">location_on</span>
+<span>London, SE1 7PB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Section with Tonal Depth -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Panel: Info & Socials -->
+<div class="lg:col-span-1 space-y-8">
+<section class="bg-surface-container-highest p-10 h-full">
+<h4 class="font-label text-xs font-bold tracking-widest uppercase mb-12 border-b border-outline-variant/30 pb-4">Contact Details</h4>
+<div class="space-y-10">
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Direct Email</p>
+<a class="text-xl font-medium hover:text-primary transition-colors underline decoration-outline-variant/30 underline-offset-8" href="mailto:hello@studiogeorgina.com">hello@studiogeorgina.com</a>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Press &amp; Media</p>
+<a class="text-xl font-medium hover:text-primary transition-colors underline decoration-outline-variant/30 underline-offset-8" href="mailto:press@studiogeorgina.com">press@studiogeorgina.com</a>
+</div>
+<div class="pt-8">
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mb-6">Social Narrative</p>
+<div class="flex gap-6">
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-lowest hover:bg-primary hover:text-on-primary transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110">brand_awareness</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-lowest hover:bg-primary hover:text-on-primary transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110">photo_camera</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-surface-container-lowest hover:bg-primary hover:text-on-primary transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110">play_circle</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Main Inquiry Form: Editorial Layout -->
+<div class="lg:col-span-2">
+<div class="bg-surface-container-lowest p-10 md:p-16 shadow-[0_20px_40px_rgba(42,52,52,0.06)]">
+<h2 class="font-headline text-3xl font-bold mb-12">Inquiry Form</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="space-y-2">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 focus:ring-0 focus:border-primary placeholder:text-outline-variant/50 transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 focus:ring-0 focus:border-primary placeholder:text-outline-variant/50 transition-colors" placeholder="john@example.com" type="email"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Subject of Inquiry</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 focus:ring-0 focus:border-primary text-on-surface-variant transition-colors">
+<option>Art Commission Request</option>
+<option>Quotation for Existing Work</option>
+<option>Commercial Collaboration</option>
+<option>Press &amp; Exhibition Inquiry</option>
+<option>Other</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Your Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 focus:ring-0 focus:border-primary placeholder:text-outline-variant/50 transition-colors resize-none" placeholder="Please describe your vision or specific requirements..." rows="5"></textarea>
+</div>
+<div class="md:col-span-2 pt-6 flex flex-col md:flex-row items-center justify-between gap-8">
+<p class="text-xs text-on-surface-variant max-w-xs italic">
+                                * I typically respond to all serious inquiries within 48 business hours.
+                            </p>
+<button class="w-full md:w-auto px-12 py-5 bg-primary text-on-primary font-label text-sm font-bold tracking-widest uppercase hover:bg-primary-dim transition-all active:scale-[0.98]" type="submit">
+                                Send Message
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Secondary Visual Anchor -->
+<div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="h-64 overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up detail of rich oil paint texture on canvas with visible brushstrokes in earthy green and ochre tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmgiqqedWYTclvQzObvmw-HuE3oEPozuv6FFZa2KU3O2LydcsAFe0yNzCKzPsPE1d5TEUhsAW1oRzhQSrkoyjbjo6ROF2ukTr70IPOXJYid2Q2d7o9KF50XtCFhhAAqWXtp0663g8j-0M_4LiCAVcBmB1f6Pym084cGuEu71OIVySBf5kUFI7UkqLfs0Ytp3xmXRtKJAO_GwHzHyH62vSOz-7q6eNaqsN1vt1iOQ_zEs-LaBfIWA4ggn7xO_cJAUXMaWE-RQEF_uQ"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="h-64 overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sunlit artist studio with large windows showing canvases leaning against white walls and jars of paintbrushes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTT_apqcz8uan3ZVsb5uCff2ue038IZJ9Mq21BJcqtehW11_msbSLdtcmjt9BL8oYDhKqedXPZfMFD3dkKHUHFPAG4VDwoZ7BA-RwKIIPfIYf7fJsDBkhLd9X5TFR5p3cXo2NkeRbuhvQLQVm8rKLAvQDmxCgzrr-kQS-gfCZ_WTkgEPw0VTlFUX7ZDiO0X-AJuybJ6vOdR1xsGZGv1Nl7AhUv1wV06arzuepZnP1bAQO_dtoHtrOBwqy96dx2p5oENVe6Iyugklo"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="h-64 overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist art palette with carefully arranged shades of forest green, sage, and cream paints mixed together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYg2YaInZNQ8U_TYwTm3AfG7FtY1VFmeXuAOUwgVO7DZUhEz46BcYGy5aFRPdzpMjqU73dNgBoSh3yRjLCqC6RZ55ybyWlt0r9GZFzFq8ceh-WnD5ZF2ues7CseWQSNupQJJqXVqlGyngifo6PJADf1JewYYcYaqmFlmJh3y-zufEzKl3IPeE1xnkFR3oILn-tB-Hd3iTuXBa5RabRZzB6TFj6adF5iy0rLIlnEBQSs94J9kevi28eynBz1qErrmgZ2XD-cRuVads"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+</div>
+</main>
+<!-- Footer Identity -->
+<footer class="bg-surface-container-low py-16 px-8 mt-24">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div>
+<h2 class="text-2xl font-bold tracking-tighter mb-2">Studio Georgina</h2>
+<p class="text-sm text-on-surface-variant font-label tracking-wide uppercase">All Rights Reserved © 2024</p>
+</div>
+<div class="flex flex-wrap gap-8 text-xs font-label uppercase tracking-widest text-outline">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#f8faf9] border-t border-[#a9b4b3]/15 px-4 pb-safe shadow-[0_-10px_30px_rgba(42,52,52,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#a9b4b3]">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Main</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#a9b4b3]">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Creativity</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#a9b4b3]">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">My Story</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#50625d] scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase">Contact</span>
+</div>
+</nav>
+</body></html>

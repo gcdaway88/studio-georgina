@@ -1,0 +1,32 @@
+// ─────────────────────────────────────────────────────────────
+// Firebase config (Auth + Firestore only — no Storage needed)
+// ─────────────────────────────────────────────────────────────
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import { getAuth }       from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+import { getFirestore }  from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyBvkccI9Vz4KGmaJEz51s5uuVJgNjK4EWc",
+  authDomain: "studio-georgina.firebaseapp.com",
+  projectId: "studio-georgina",
+  storageBucket: "studio-georgina.firebasestorage.app",
+  messagingSenderId: "795529544102",
+  appId: "1:795529544102:web:56be0c076d901852c74f67",
+  measurementId: "G-L6BCWPE7SL"
+};
+
+// ─────────────────────────────────────────────────────────────
+// Cloudinary — used for image uploads (free, no credit card)
+// 1. Sign up free at cloudinary.com
+// 2. Note your Cloud Name from the dashboard
+// 3. Go to Settings → Upload → Add upload preset
+//    Set name: studio_georgina   Signing mode: Unsigned
+// Then fill in the two values below:
+// ─────────────────────────────────────────────────────────────
+export const CLOUDINARY_CLOUD_NAME   = "dptqagaip";
+export const CLOUDINARY_UPLOAD_PRESET = "studio_georgina";
+
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const db   = getFirestore(app);

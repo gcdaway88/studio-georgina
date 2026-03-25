@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              "headline": ["Public Sans", "sans-serif"],
+              "body": ["Public Sans", "sans-serif"],
+              "label": ["Public Sans", "sans-serif"],
+              "epilogue": ["Epilogue", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8faf9;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-[#f8faf9] text-[#2a3434] antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8faf9]/90 dark:bg-[#2a3434]/90 backdrop-blur-xl border-b border-[#a9b4b3]/30">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#2a3434] dark:text-[#f8faf9] font-epilogue">
+                Studio Georgina
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="#">Main</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#50625d] dark:text-[#e8fcf5] border-b border-[#50625d] pb-1 transition-colors duration-300" href="#">Creativity</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="#">My Story</a>
+<a class="font-['Epilogue'] font-medium text-sm tracking-wider uppercase text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="#">Contact Me</a>
+</div>
+<div class="flex items-center">
+<button class="p-2 text-[#50625d] dark:text-[#e8fcf5] Active: opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16 max-w-3xl">
+<h1 class="text-5xl font-extrabold tracking-tight mb-6 text-[#2a3434] font-headline">Selected Works</h1>
+<p class="text-lg text-[#50625d] leading-relaxed">
+                A curated collection of digital and physical explorations focusing on minimalist forms, organic textures, and the interplay of light and shadow. Each piece is a unique expression of technical precision and creative intuition.
+            </p>
+</header>
+<!-- Filter Bar -->
+<div class="flex items-center justify-between mb-12 pb-6 border-b border-[#a9b4b3]/20">
+<div class="flex gap-6">
+<button class="text-xs font-bold tracking-widest uppercase border-b-2 border-[#2a3434] pb-1">All Collections</button>
+<button class="text-xs font-bold tracking-widest uppercase text-[#a9b4b3] hover:text-[#50625d] transition-colors">Digital Art</button>
+<button class="text-xs font-bold tracking-widest uppercase text-[#a9b4b3] hover:text-[#50625d] transition-colors">Physical Canvas</button>
+<button class="text-xs font-bold tracking-widest uppercase text-[#a9b4b3] hover:text-[#50625d] transition-colors">Sculptural</button>
+</div>
+<div class="flex items-center gap-2 text-[#50625d]">
+<span class="text-sm font-medium">Sort by:</span>
+<select class="bg-transparent border-none text-sm font-bold focus:ring-0 cursor-pointer">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest</option>
+</select>
+</div>
+</div>
+<!-- Gallery Grid -->
+<div class="gallery-grid">
+<!-- Piece 1 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#ececec] rounded-lg mb-4">
+<img alt="Abstract digital art" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Minimalist abstract digital artwork with flowing organic shapes in muted sage green and cream tones, soft grainy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHpl-89jMyEiNwJ_OuDNEpsnwamb3Cw4OJz0ASO9rx3bHP2ljAe_MWhVRVhLYYiBbzQhrpB-sKrxVeyi9wqmXS70WZcCNMxI7Hph0YsZ-vBGqis9aiY4nz8WrAk9zIFTuDIjShGmNJ7vvB7bHq1ZW0gA5X9j3pW15P5b_PZ3_zre08JfVRPeBW6ClIHYWWnwqoPG-Q0IC8NcCDhybAMVdl-MLjcADz4z0BYik06woUbrhKnT93iwjpxfe4-kwLlR2bq9itmwxpXHg"/>
+<div class="absolute inset-0 bg-[#2a3434]/0 group-hover:bg-[#2a3434]/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg text-[#2a3434]">Ethereal Tides 01</h3>
+<p class="text-sm text-[#50625d] font-medium">Digital Edition of 10</p>
+</div>
+<span class="font-epilogue font-bold text-[#2a3434]">$450.00</span>
+</div>
+</div>
+<!-- Piece 2 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#ececec] rounded-lg mb-4">
+<img alt="Contemporary painting" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Contemporary painting with bold charcoal brushstrokes on a textured linen canvas, high contrast lighting showing depth of paint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnvQBO0gsU6mDQ6OiU3g_1kRVSpDrzcsZKQE8LfbZ9zRv3NkOmqkillQdFfV4QKGdfMvlb3zsZ9V2124cexN-OX-OKwXQchbk2ZFk-XfvodTjXu1HdALN3sNmItPN6bvgsKztt-DwsNpdM_3p0uQYXkXdjEV1tUjKfNcWPZRKKmyDzU2EGbcY1R3fDr2quUW13sLFXQgG8VsBdtSqPnZv_wcYe1FNqmd51XXwJFOWHX8biQr8LsOC6MpyAflYt90clBdR3ckeHn0w"/>
+<div class="absolute inset-0 bg-[#2a3434]/0 group-hover:bg-[#2a3434]/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg text-[#2a3434]">Carbon Echo</h3>
+<p class="text-sm text-[#50625d] font-medium">Mixed Media on Canvas</p>
+</div>
+<span class="font-epilogue font-bold text-[#2a3434]">$1,200.00</span>
+</div>
+</div>
+<!-- Piece 3 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#ececec] rounded-lg mb-4">
+<img alt="Minimalist 3D render" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="3D minimalist render of geometric spheres and planes in a soft sunlit architectural space, warm shadows and clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrgCPO7cKLuZBUyU6IEM4OPknLk-aUi-a1pDSYxNxI-PdswSPSyeRhh3xypMXrOj1f_rLIWgc4xcU-9ZvyfbUIg98k5Ogainr04qP5ZWCS89BzSRJg9gN93RU7a_xQXXecM6eS2TgFDASUmoMKqxx_IoP9xX5jee9SqHCtKJWEfGRQ05Uzv6mQ5TRLg-5Pg9dKOUTHAaP5P-zdqkFMHgdD51ID0_YWe_-f9Q5uPEd7w5PCSx5xqfkvkYfTMv0qGZ3g-kcH6rQW76k"/>
+<div class="absolute inset-0 bg-[#2a3434]/0 group-hover:bg-[#2a3434]/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg text-[#2a3434]">Geometric Silence</h3>
+<p class="text-sm text-[#50625d] font-medium">Digital Masterwork</p>
+</div>
+<span class="font-epilogue font-bold text-[#2a3434]">$620.00</span>
+</div>
+</div>
+<!-- Piece 4 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#ececec] rounded-lg mb-4">
+<img alt="Abstract texture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Close up of cracked white plaster texture with gold leaf accents in the crevices, elegant and weathered aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1-lVYIQjXhkVx7rYQMjHdXqAsnSd6mRxrRNLY-6ezulucJ7pegOWxsJ7Q40mB66mi-MQL8buFrRyakHH2kadJaY6j0qGxYqFab_1sd-32oot0vck-8CsoKCCJI4zbBwGdRuWZvn6GskVqC-YXX6cBtX1I3V_r8BAvH_XokbODZaXOVYtP5AIO6YunOo8mR0bUFTcHmXrGB9NNt8xEGgqGSJTf1vAS0p1Iy4n6XkZ7MfDMRkLi0HGEzRC6JFexq1psyRKjvX_Fws0"/>
+<div class="absolute inset-0 bg-[#2a3434]/0 group-hover:bg-[#2a3434]/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg text-[#2a3434]">Kintsugi Dreams</h3>
+<p class="text-sm text-[#50625d] font-medium">Fine Art Print</p>
+</div>
+<span class="font-epilogue font-bold text-[#2a3434]">$380.00</span>
+</div>
+</div>
+<!-- Piece 5 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#ececec] rounded-lg mb-4">
+<img alt="Fluid art" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Fluid art painting with swirling blue and copper metallic pigments, deep ocean vibes with metallic shimmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Mgc-ml9vt9OipZN_4f4pTPG_2gOfuBdUglQIk3MiC_0h-njrwrz69JahvfU6xJT4792kerTHQd5nGy0JLWNNdQlgFomWkDpyvnHa3qgiDV0dpOhuRD8Xo7oOG6ULpBNb7xbjjj3TFkFpH3soXuv3fXOmHNMySsPIBWlUNquhPg2zF-1bHSuCrUHibsvxXk2IN-pyNNqkokgzQ078wJ-8WrApnil7UhqK2Ac6cj3WDSu4bxKrwJxpnhbOe4Wnmz0dgkBUicDEJp4"/>
+<div class="absolute inset-0 bg-[#2a3434]/0 group-hover:bg-[#2a3434]/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg text-[#2a3434]">Abyssal Flow</h3>
+<p class="text-sm text-[#50625d] font-medium">Acrylic on Canvas</p>
+</div>
+<span class="font-epilogue font-bold text-[#2a3434]">$1,550.00</span>
+</div>
+</div>
+<!-- Piece 6 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[4/5] bg-[#ececec] rounded-lg mb-4">
+<img alt="Modern sculpture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Minimalist ceramic sculpture with smooth white curves, studio lighting highlighting the elegant silhouette against a gray backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVmvtvYv02pl-mDo54QBKujP70Qut3cmzxhSK6wa-8T8lJBPGeeU5x2VNr2PhfIFOQMDKiopS9SfDI-nCK8XuM3XVHpEHWs8WaaAXl5NMO0UMzPslRV68IQnnToTYWd455zS574IITGLsxcuO3OKl7_kmmW1-NRiL4A3RdseVO6AB__x96mj54V6QxMbSPje0HiX8uuj36ScH_JDVGczH98uw3CeW6STfVTvSYJxMZwPe1fijWnh4DXTCT7P-kTnJVVGPOHneS1q8"/>
+<div class="absolute inset-0 bg-[#2a3434]/0 group-hover:bg-[#2a3434]/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg text-[#2a3434]">Lunar Vessel</h3>
+<p class="text-sm text-[#50625d] font-medium">Handcrafted Ceramic</p>
+</div>
+<span class="font-epilogue font-bold text-[#2a3434]">$890.00</span>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex items-center justify-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center border border-[#a9b4b3]/30 rounded-full text-[#50625d] hover:bg-[#2a3434] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-[#2a3434] text-white text-sm font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-[#a9b4b3]/30 text-[#2a3434] text-sm font-bold hover:bg-[#f0f0f0] transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-[#a9b4b3]/30 text-[#2a3434] text-sm font-bold hover:bg-[#f0f0f0] transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center border border-[#a9b4b3]/30 rounded-full text-[#50625d] hover:bg-[#2a3434] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2a3434] text-[#f8faf9] py-20 px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start">
+<div class="mb-12 md:mb-0">
+<div class="text-2xl font-bold tracking-tighter mb-6 font-epilogue">Studio Georgina</div>
+<p class="text-[#a9b4b3] max-w-sm mb-8 leading-relaxed">
+                    Elevating the digital gallery experience through minimalist design and purposeful curation.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full border border-[#a9b4b3]/30 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full border border-[#a9b4b3]/30 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="camera">camera</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#a9b4b3]">Studio</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Press Kit</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#a9b4b3]">Support</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#a9b4b3]">Join the Journal</h4>
+<div class="flex">
+<input class="bg-white/5 border border-[#a9b4b3]/20 px-4 py-2 text-sm focus:outline-none focus:border-white/50 w-full rounded-l" placeholder="Email address" type="email"/>
+<button class="bg-white text-[#2a3434] px-4 py-2 text-sm font-bold rounded-r">Join</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-[#a9b4b3] tracking-widest uppercase">
+<div>© 2024 Studio Georgina. All Rights Reserved.</div>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Hidden on desktop as per rules) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#f8faf9] dark:bg-[#2a3434] px-4 pb-safe border-t border-[#a9b4b3]/15 shadow-[0_-10px_30px_rgba(42,52,52,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#a9b4b3]" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Main</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#50625d] dark:text-[#e8fcf5] scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Creativity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3]" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Story</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3]" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Contact</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              "headline": ["Public Sans", "sans-serif"],
+              "body": ["Public Sans", "sans-serif"],
+              "label": ["Public Sans", "sans-serif"],
+              "epilogue": ["Epilogue", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8faf9;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#f8faf9] text-[#2a3434] antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8faf9]/90 dark:bg-[#2a3434]/90 backdrop-blur-xl border-b border-[#a9b4b3]/30">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#2a3434] dark:text-[#f8faf9] font-['Epilogue']">
+                Studio Georgina
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Epilogue'] font-medium text-base tracking-wider uppercase text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="Main.html">Main</a>
+<a class="font-['Epilogue'] font-medium text-base tracking-wider uppercase text-[#50625d] dark:text-[#e8fcf5] border-b border-[#50625d] pb-1 transition-colors duration-300" href="Creativity.html">Creativity</a>
+<a class="font-['Epilogue'] font-medium text-base tracking-wider uppercase text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="My_Story.html">My Story</a>
+<a class="font-['Epilogue'] font-medium text-base tracking-wider uppercase text-[#2a3434]/60 dark:text-[#f8faf9]/60 hover:text-[#50625d] dark:hover:text-[#e8fcf5] transition-colors duration-300" href="Contact_Me.html">Contact Me</a>
+</div>
+<div class="flex items-center gap-1">
+<a href="admin.html" class="p-2 text-[#50625d] dark:text-[#e8fcf5] active:opacity-70 transition-opacity" title="Admin">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</a>
+<button id="menu-toggle" class="md:hidden p-2 text-[#50625d] dark:text-[#e8fcf5] active:opacity-70 transition-opacity" aria-label="Open navigation">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Hamburger Menu -->
+<div id="mobile-menu" class="hidden md:hidden">
+  <div id="menu-backdrop" class="fixed inset-0 z-40 bg-[#2a3434]/10"></div>
+  <div class="fixed inset-x-0 top-16 z-50 bg-[#f8faf9]/95 backdrop-blur-xl shadow-[0_20px_60px_-10px_rgba(42,52,52,0.12)] border-b border-[#a9b4b3]/20">
+    <nav class="max-w-screen-2xl mx-auto px-8 py-6">
+      <a href="Main.html" class="flex items-center gap-5 py-4 border-b border-[#a9b4b3]/10 group">
+        <span class="material-symbols-outlined text-[#a9b4b3] group-hover:text-[#50625d] transition-colors">home</span>
+        <span class="font-['Epilogue'] font-medium text-xl tracking-tight text-[#2a3434]/50 group-hover:text-[#50625d] transition-colors">Main</span>
+      </a>
+      <a href="Creativity.html" class="flex items-center gap-5 py-4 border-b border-[#a9b4b3]/10">
+        <span class="material-symbols-outlined text-[#50625d]">palette</span>
+        <span class="font-['Epilogue'] font-bold text-xl tracking-tight text-[#50625d]">Creativity</span>
+        <div class="ml-auto w-1.5 h-1.5 rounded-full bg-[#50625d]"></div>
+      </a>
+      <a href="My_Story.html" class="flex items-center gap-5 py-4 border-b border-[#a9b4b3]/10 group">
+        <span class="material-symbols-outlined text-[#a9b4b3] group-hover:text-[#50625d] transition-colors">auto_stories</span>
+        <span class="font-['Epilogue'] font-medium text-xl tracking-tight text-[#2a3434]/50 group-hover:text-[#50625d] transition-colors">My Story</span>
+      </a>
+      <a href="Contact_Me.html" class="flex items-center gap-5 py-4 group">
+        <span class="material-symbols-outlined text-[#a9b4b3] group-hover:text-[#50625d] transition-colors">mail</span>
+        <span class="font-['Epilogue'] font-medium text-xl tracking-tight text-[#2a3434]/50 group-hover:text-[#50625d] transition-colors">Contact Me</span>
+      </a>
+    </nav>
+  </div>
+</div>
+<main class="pt-32 pb-20 md:pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16 max-w-3xl">
+<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-[#2a3434] font-headline">Selected Works</h1>
+<p class="text-lg text-[#50625d] leading-relaxed">
+                A curated collection of digital and physical explorations focusing on minimalist forms, organic textures, and the interplay of light and shadow. Each piece is a unique expression of technical precision and creative intuition.
+            </p>
+</header>
+<!-- Filter Bar -->
+<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-12 pb-6 border-b border-[#a9b4b3]/20">
+<div class="flex gap-4 overflow-x-auto pb-1 -mx-8 px-8 sm:mx-0 sm:px-0 sm:flex-wrap sm:overflow-visible">
+<button class="text-xs font-bold tracking-widest uppercase border-b-2 border-[#2a3434] pb-1 whitespace-nowrap shrink-0">All Collections</button>
+<button class="text-xs font-bold tracking-widest uppercase text-[#a9b4b3] hover:text-[#50625d] transition-colors whitespace-nowrap shrink-0">Digital Art</button>
+<button class="text-xs font-bold tracking-widest uppercase text-[#a9b4b3] hover:text-[#50625d] transition-colors whitespace-nowrap shrink-0">Physical Canvas</button>
+<button class="text-xs font-bold tracking-widest uppercase text-[#a9b4b3] hover:text-[#50625d] transition-colors whitespace-nowrap shrink-0">Sculptural</button>
+</div>
+<div class="flex items-center gap-2 text-[#50625d] shrink-0">
+<span class="text-sm font-medium">Sort by:</span>
+<select class="bg-transparent border-none text-sm font-bold focus:ring-0 cursor-pointer">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest</option>
+</select>
+</div>
+</div>
+<!-- Works Count -->
+<p id="works-count" class="text-sm text-[#a9b4b3] mb-8 font-medium tracking-wide"></p>
+<!-- Gallery Grid (JS-populated) -->
+<div id="gallery" class="gallery-grid">
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2a3434] text-[#f8faf9] py-20 px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start">
+<div class="mb-12 md:mb-0">
+<div class="text-2xl font-bold tracking-tighter mb-6 font-epilogue">Studio Georgina</div>
+<p class="text-[#a9b4b3] max-w-sm mb-8 leading-relaxed">
+                    Elevating the digital gallery experience through minimalist design and purposeful curation.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full border border-[#a9b4b3]/30 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full border border-[#a9b4b3]/30 hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="camera">camera</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#a9b4b3]">Studio</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Press Kit</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#a9b4b3]">Support</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[#a9b4b3]">Join the Journal</h4>
+<div class="flex">
+<input class="bg-white/5 border border-[#a9b4b3]/20 px-4 py-2 text-sm focus:outline-none focus:border-white/50 w-full rounded-l" placeholder="Email address" type="email"/>
+<button class="bg-white text-[#2a3434] px-4 py-2 text-sm font-bold rounded-r">Join</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-[#a9b4b3] tracking-widest uppercase">
+<div>© 2024 Studio Georgina. All Rights Reserved.</div>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Hidden on desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-[#f8faf9] dark:bg-[#2a3434] px-4 pb-safe border-t border-[#a9b4b3]/15 shadow-[0_-10px_30px_rgba(42,52,52,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#a9b4b3]" href="Main.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Main</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#50625d] dark:text-[#e8fcf5] scale-110 transition-transform" href="Creativity.html">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Creativity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3]" href="My_Story.html">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Story</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a9b4b3]" href="Contact_Me.html">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Epilogue'] font-bold text-[10px] tracking-widest uppercase mt-1">Contact</span>
+</a>
+</nav>
+<style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+<script type="module">
+import { loadGallery, initGalleryAdmin } from './js/gallery-loader.js';
+import { initAdminAuth, onAdminReady }   from './js/admin-auth.js';
+
+const galleryEl  = document.getElementById('gallery');
+const worksCount = document.getElementById('works-count');
+
+initAdminAuth();
+await loadGallery(galleryEl, worksCount);
+onAdminReady(() => initGalleryAdmin(galleryEl));
+
+// ── Legacy fallback data kept here only for migrate.html reference ──
+// (actual gallery data now lives in Firestore)
+const _LEGACY_IMAGES = [
+        "3096405185034868737.jpg",
+        "3096418049158120899.jpg",
+        "3100579468659020984.jpg",
+        "3106541859161810627.jpg",
+        "3119310835024193625.jpg",
+        "3120090034200294989.jpg",
+        "3134816440201550570.jpg",
+        "3155515562276069831.jpg",
+        "3162448378789012280.jpg",
+        "3173790210052581452.jpg",
+        "3181307405484541460_3181307400988159762.jpg",
+        "3181307405484541460_3181307401005143565.jpg",
+        "3183298052127395618.jpg",
+        "3187127958099370560_3187127952042710269.jpg",
+        "3187127958099370560_3187127952109852912.jpg",
+        "3245681856845166192.jpg",
+        "3255767687602529925.jpg",
+        "3256559619986438916.jpg",
+        "3256561370907101116.jpg",
+        "3256562791148778857_3256562787751323268.jpg",
+        "3256562791148778857_3256562787751335044.jpg",
+        "3256564134827685870.jpg",
+        "3325748340916596241_3325748335891737503.jpg",
+        "3325748340916596241_3325748335900108180.jpg",
+        "3325748340916596241_3325748335925412795.jpg",
+        "3325748340916596241_3325748335950622123.jpg",
+        "3325748340916596241_3325748335975631197.jpg",
+        "3333871154237448779.jpg",
+        "3412900085089141024.jpg",
+        "3419333199086409010_3419333186604095347.jpg",
+        "3419333199086409010_3419333186620821421.jpg",
+        "3419333199086409010_3419333186637686724.jpg",
+        "3419333199086409010_3419333186713135436.jpg",
+        "3419333199086409010_3419333186713207590.jpg",
+        "3419333199086409010_3419333186721665349.jpg",
+        "3419333199086409010_3419333186746584364.jpg",
+        "3419333199086409010_3419333186746631545.jpg",
+        "3419333199086409010_3419333186763549459.jpg",
+        "3419333199086409010_3419333186855823871.jpg",
+        "3421548503103270240.jpg",
+        "3425268273255026033.jpg",
+        "3431086976534262082_3431086967273109111.jpg",
+        "3431086976534262082_3431086967273142569.jpg",
+        "3431086976534262082_3431086967273241609.jpg",
+        "3431086976534262082_3431086967398897276.jpg",
+        "3431086976534262082_3431086967608680054.jpg",
+        "3433999747731155707_3433999732916647883.jpg",
+        "3433999747731155707_3433999732916694566.jpg",
+        "3433999747731155707_3433999732916739568.jpg",
+        "3433999747731155707_3433999732916801786.jpg",
+        "3433999747731155707_3433999732916832888.jpg",
+        "3433999747731155707_3433999732916856497.jpg",
+        "3433999747731155707_3433999732983883191.jpg",
+        "3433999747731155707_3433999733042465534.jpg",
+        "3433999747731155707_3433999733042512167.jpg",
+        "3433999747731155707_3433999733042614447.jpg",
+        "3433999747731155707_3433999733042689504.jpg",
+        "3433999747731155707_3433999733042689528.jpg",
+        "3433999747731155707_3433999733117955962.jpg",
+        "3433999747731155707_3433999733327837043.jpg",
+        "3433999747731155707_3433999733386532105.jpg",
+        "3433999747731155707_3433999733411698159.jpg",
+        "3437647948115684399.jpg",
+        "3461006576123790235.jpg",
+        "3472455254296727700.jpg",
+        "3522206616008864105_3522206607309855073.jpg",
+        "3522206616008864105_3522206607452490255.jpg",
+        "3522206616008864105_3522206607452652137.jpg",
+        "3522206616008864105_3522206607494368370.jpg",
+        "3522206616008864105_3522206607553269447.jpg",
+        "3524459241085486960_3524459233200119638.jpg",
+        "3524459241085486960_3524459233200151303.jpg",
+        "3524459241085486960_3524459233200180733.jpg",
+        "3524459241085486960_3524459233233719094.jpg",
+        "3524459241085486960_3524459233317738725.jpg",
+        "3543957619589098193_3543957608264556583.jpg",
+        "3543957619589098193_3543957608264558905.jpg",
+        "3543957619589098193_3543957608264623463.jpg",
+        "3543957619589098193_3543957608272929540.jpg",
+        "3543957619589098193_3543957608272992965.jpg",
+        "3543957619589098193_3543957608314798374.jpg",
+        "3543957619589098193_3543957608331504981.jpg",
+        "3543957619589098193_3543957608339909745.jpg",
+        "3543957619589098193_3543957608339913878.jpg",
+        "3543957619589098193_3543957608339962618.jpg",
+        "3555773454702533209.jpg",
+        "3592338542040659326.jpg",
+        "3613674677920997310.jpg",
+        "3713767714189384846.jpg",
+        "3726320525271539284_3726320518795517237.jpg",
+        "3726320525271539284_3726320518803926914.jpg",
+        "3726320525271539284_3726320518971692644.jpg",
+        "3741628779409080476.jpg",
+        "3783797319780320164_3783797305360312233.jpg",
+        "3783797319780320164_3783797305368650310.jpg",
+        "3783797319780320164_3783797305368655498.jpg",
+        "3783797319780320164_3783797305368656473.jpg",
+        "3783797319780320164_3783797305368686426.jpg",
+        "3783797319780320164_3783797305368686693.jpg",
+        "3783797319780320164_3783797305368699786.jpg",
+        "3783797319780320164_3783797305368702672.jpg",
+        "3783797319780320164_3783797305368703793.jpg",
+        "3783797319780320164_3783797305368704927.jpg",
+        "3783797319780320164_3783797305377057398.jpg",
+        "3783797319780320164_3783797305460932702.jpg",
+        "3783797319780320164_3783797305477756419.jpg"
+    ];
+
+// (legacy array above is kept as reference only — gallery renders from Firestore)
+</script>
+<script>
+  (function() {
+    var t = document.getElementById('menu-toggle'),
+        m = document.getElementById('mobile-menu'),
+        i = document.getElementById('menu-icon'),
+        b = document.getElementById('menu-backdrop');
+    if (!t) return;
+    t.addEventListener('click', function() {
+      var hidden = m.classList.toggle('hidden');
+      i.textContent = hidden ? 'menu' : 'close';
+      t.setAttribute('aria-label', hidden ? 'Open navigation' : 'Close navigation');
+    });
+    b && b.addEventListener('click', function() {
+      m.classList.add('hidden');
+      i.textContent = 'menu';
+      t.setAttribute('aria-label', 'Open navigation');
+    });
+  })();
+</script>
+</body></html>
